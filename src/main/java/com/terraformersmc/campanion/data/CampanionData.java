@@ -65,7 +65,7 @@ public class CampanionData implements DossierProvider {
 			this.get(CampanionItemTags.MELTED_MARSHMALLOWS).add(CampanionItems.COOKED_MARSHMALLOW, CampanionItems.BLACKENED_MARSHMALLOW);
 			this.get(CampanionItemTags.MARSHMALLOWS).add(CampanionItems.MARSHMALLOW).addTag(CampanionItemTags.MELTED_MARSHMALLOWS);
 			this.get(CampanionItemTags.MARSHMALLOWS_ON_STICKS).add(CampanionItems.MARSHMALLOW_ON_A_STICK, CampanionItems.COOKED_MARSHMALLOW_ON_A_STICK, CampanionItems.BLACKENED_MARSHMALLOW_ON_A_STICK);
-			this.get(CampanionItemTags.SPEARS).add(CampanionItems.WOODEN_SPEAR, CampanionItems.STONE_SPEAR, CampanionItems.IRON_SPEAR, CampanionItems.GOLDEN_SPEAR, CampanionItems.DIAMOND_SPEAR);
+			this.get(CampanionItemTags.SPEARS).add(CampanionItems.WOODEN_SPEAR, CampanionItems.STONE_SPEAR, CampanionItems.IRON_SPEAR, CampanionItems.GOLDEN_SPEAR, CampanionItems.DIAMOND_SPEAR, CampanionItems.NETHERITE_SPEAR);
 			this.get(CampanionItemTags.BACKPACKS).add(CampanionItems.DAY_PACK, CampanionItems.CAMPING_PACK, CampanionItems.HIKING_PACK);
 			this.get(CampanionItemTags.FRUITS).add(Items.APPLE, Items.CHORUS_FRUIT, Items.MELON_SLICE, Items.SWEET_BERRIES);
 			this.get(CampanionItemTags.GRAINS).add(Items.BREAD, Items.CAKE, Items.COOKIE, CampanionItems.CRACKER);
@@ -110,6 +110,7 @@ public class CampanionData implements DossierProvider {
 			ShapedRecipeJsonFactory.create(CampanionItems.IRON_SPEAR).input('#', CampanionItems.WOODEN_ROD).input('X', Items.IRON_INGOT).pattern("X").pattern("#").criterion("has_iron", this.conditionsFrom(Items.IRON_INGOT)).offerTo(exporter);
 			ShapedRecipeJsonFactory.create(CampanionItems.GOLDEN_SPEAR).input('#', CampanionItems.WOODEN_ROD).input('X', Items.GOLD_INGOT).pattern("X").pattern("#").criterion("has_gold", this.conditionsFrom(Items.GOLD_INGOT)).offerTo(exporter);
 			ShapedRecipeJsonFactory.create(CampanionItems.DIAMOND_SPEAR).input('#', CampanionItems.WOODEN_ROD).input('X', Items.DIAMOND).pattern("X").pattern("#").criterion("has_diamond", this.conditionsFrom(Items.DIAMOND)).offerTo(exporter);
+			ShapedRecipeJsonFactory.create(CampanionItems.NETHERITE_SPEAR).input('#', CampanionItems.WOODEN_ROD).input('X', Items.NETHERITE_INGOT).pattern("X").pattern("#").criterion("has_netherite", this.conditionsFrom(Items.NETHERITE_INGOT)).offerTo(exporter);
 
 			ShapedRecipeJsonFactory.create(CampanionBlocks.WHITE_LAWN_CHAIR).input('P', net.minecraft.tag.ItemTags.PLANKS).input('C', Blocks.WHITE_CARPET).input('S', Items.STICK).pattern("P  ").pattern("PCP").pattern("S S").group("lawn_chair").criterion("has_white_carpet", this.conditionsFrom(Blocks.WHITE_CARPET)).offerTo(exporter);
 			ShapedRecipeJsonFactory.create(CampanionBlocks.ORANGE_LAWN_CHAIR).input('P', net.minecraft.tag.ItemTags.PLANKS).input('C', Blocks.ORANGE_CARPET).input('S', Items.STICK).pattern("P  ").pattern("PCP").pattern("S S").group("lawn_chair").criterion("has_orange_carpet", this.conditionsFrom(Blocks.ORANGE_CARPET)).offerTo(exporter);
@@ -171,7 +172,6 @@ public class CampanionData implements DossierProvider {
 			this.drops(CampanionBlocks.RED_LAWN_CHAIR);
 			this.drops(CampanionBlocks.BLACK_LAWN_CHAIR);
 			this.drops(CampanionBlocks.LEATHER_TANNER);
-
 
 			this.addTentPartDrop(CampanionBlocks.WHITE_TENT_SIDE);
 			this.addTentPartDrop(CampanionBlocks.ORANGE_TENT_SIDE);

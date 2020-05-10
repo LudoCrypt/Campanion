@@ -38,6 +38,7 @@
   "item.campanion.iron_spear": "Iron Spear",
   "item.campanion.golden_spear": "Golden Spear",
   "item.campanion.diamond_spear": "Diamond Spear",
+  "item.campanion.netherite_spear": "Netherite Spear",
 
   "item.campanion.grappling_hook": "Grappling Hook",
 
@@ -244,7 +245,7 @@
 
   "stat.campanion.sleep_in_sleeping_bag": "Times Slept in a Sleeping Bag",
   "stat.campanion.stone_skips": "Stone Skips",
-  
+
   "subtitles.campanion.howl": "Wolf howling",
   "subtitles.campanion.spear_hit_ground": "Spear hitting the ground",
   "subtitles.campanion.spear_hit_flesh": "Spear hitting flesh",
